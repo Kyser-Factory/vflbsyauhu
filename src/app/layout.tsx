@@ -16,9 +16,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${fontHeading.variable} ${fontBody.variable} h-full`}>
       <body className="h-full overflow-hidden bg-background text-foreground">
         <ClientShell>
-          <HeaderIndustrial logo={PROJECT_IDENTITY.brandName} branding={PROJECT_IDENTITY.branding} links={PROJECT_IDENTITY.navigation.links} cta={PROJECT_IDENTITY.navigation.primaryCta} />
+          <HeaderIndustrial logo={PROJECT_IDENTITY.brandName} branding={PROJECT_IDENTITY.branding} links={PROJECT_IDENTITY.header.links} cta={PROJECT_IDENTITY.header.cta} />
           <main className="min-h-screen">{children}</main>
-          <FooterIndustrial logo={PROJECT_IDENTITY.brandName} branding={PROJECT_IDENTITY.branding} copyright={`© ${new Date().getFullYear()} ${PROJECT_IDENTITY.brandName}. All rights reserved.`} />
+          <FooterIndustrial 
+            logo={PROJECT_IDENTITY.brandName} 
+            branding={PROJECT_IDENTITY.branding}
+            tagline={PROJECT_IDENTITY.footer.tagline}
+            links={PROJECT_IDENTITY.footer.links}
+            socialLinks={PROJECT_IDENTITY.footer.socialLinks}
+            policyLinks={PROJECT_IDENTITY.footer.policyLinks}
+            copyright={`© ${new Date().getFullYear()} ${PROJECT_IDENTITY.brandName}. All rights reserved.`} 
+          />
         </ClientShell>
       </body>
     </html>
