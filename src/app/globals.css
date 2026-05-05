@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "simplebar-react/dist/simplebar.min.css";
+
+
+:root {
+  --background: #121212;
+  --background-rgb: 18, 18, 18;
+  --foreground: #FFFFFF;
+  --foreground-rgb: 255, 255, 255;
+  --card: #1F1F1F;
+  --card-rgb: 31, 31, 31;
+  --card-foreground: #E4E4E4;
+  --card-foreground-rgb: 228, 228, 228;
+  --popover: #282828;
+  --popover-rgb: 40, 40, 40;
+  --popover-foreground: #F1F1F1;
+  --popover-foreground-rgb: 241, 241, 241;
+  --primary: #1976D2;
+  --primary-rgb: 25, 118, 210;
+  --primary-foreground: #FFFFFF;
+  --primary-foreground-rgb: 255, 255, 255;
+  --secondary: #424242;
+  --secondary-rgb: 66, 66, 66;
+  --secondary-foreground: #BDBDBD;
+  --secondary-foreground-rgb: 189, 189, 189;
+  --tertiary: #757575;
+  --tertiary-rgb: 117, 117, 117;
+  --tertiary-foreground: #EEEEEE;
+  --tertiary-foreground-rgb: 238, 238, 238;
+  --quaternary: #616161;
+  --quaternary-rgb: 97, 97, 97;
+  --quaternary-foreground: #E0E0E0;
+  --quaternary-foreground-rgb: 224, 224, 224;
+  --muted: #303030;
+  --muted-rgb: 48, 48, 48;
+  --muted-foreground: #B0BEC5;
+  --muted-foreground-rgb: 176, 190, 197;
+  --accent: #FF7043;
+  --accent-rgb: 255, 112, 67;
+  --accent-foreground: #FFFFFF;
+  --accent-foreground-rgb: 255, 255, 255;
+  --destructive: #D32F2F;
+  --destructive-rgb: 211, 47, 47;
+  --destructive-foreground: #FFFFFF;
+  --destructive-foreground-rgb: 255, 255, 255;
+  --border: #333333;
+  --border-rgb: 51, 51, 51;
+  --input: #1A1A1A;
+  --input-rgb: 26, 26, 26;
+  --ring: #2962FF;
+  --ring-rgb: 41, 98, 255;
+  --radius: 0.5rem;
+  --font-heading: var(--font-heading-selected);
+  --font-body: var(--font-body-selected);
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+  
+  --color-quaternary: var(--quaternary);
+  --color-quaternary-foreground: var(--quaternary-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  
+  --radius-xl: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.5);
+  --radius-3xl: calc(var(--radius) * 2);
+  --radius-lg: calc(var(--radius) * 0.75);
+  --radius-md: calc(var(--radius) * 0.5);
+  --radius-sm: calc(var(--radius) * 0.25);
+  
+  --shadow-premium: 0 10px 15px -3px rgba(0, 0, 0, var(--shadow-strength)), 0 4px 6px -2px rgba(0, 0, 0, calc(var(--shadow-strength) * 0.5));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* SimpleBar Premium Styling */
+.simplebar-scrollbar::before {
+  background: var(--accent) !important;
+  opacity: 0.3 !important;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 0.6 !important;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 10px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.simplebar-track.simplebar-horizontal {
+  height: 10px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-background/20 backdrop-blur-md border border-white/10 shadow-2xl;
+  }
+  
+  .industrial-border {
+    @apply border-2 border-primary/20 rounded-none shadow-[4px_4px_0px_0px_rgba(var(--primary-rgb),0.1)];
+  }
+  
+  .premium-shadow {
+    @apply shadow-[0_20px_50px_rgba(0,0,0,0.1)];
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.3);
+  }
+}
