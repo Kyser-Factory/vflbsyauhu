@@ -1,13 +1,31 @@
 
+'use client';
+import ImageSplash from '@/components/splashes/ImageSplash';
+import CircuitSplash from '@/components/splashes/CircuitSplash';
+import GridSplash from '@/components/splashes/GridSplash';
+import HeroIndustrial from '@/components/blocks/HeroIndustrial';
+import AboutIndustrial from '@/components/blocks/AboutIndustrial';
+import FeaturesGridIndustrial from '@/components/blocks/FeaturesGridIndustrial';
+import TestimonialsIndustrial from '@/components/blocks/TestimonialsIndustrial';
+import PricingIndustrial from '@/components/blocks/PricingIndustrial';
+
 export default function Page() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-24 text-center space-y-6">
-      <h1 className="text-4xl font-black uppercase tracking-tighter text-primary animate-pulse">
-        Forging Identity...
-      </h1>
-      <p className="text-muted-foreground max-w-md uppercase tracking-widest text-xs font-bold">
-        Structural foundation established. Awaiting content assembly pass to deliver the high-fidelity experience.
-      </p>
-    </div>
+    <>
+      <section className="relative overflow-hidden">
+        <ImageSplash src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" />
+        <HeroIndustrial {...{"variant":"minimal","title":"Transforming Execution with AI Systems","subtitle":"We change how work gets done.","description":"Innerflect Systems designs and builds architectures for reliable, scalable execution in organizations embracing AI. Turn fragmented tools and manual processes into structured systems.","theme":"industrial","ctas":[{"label":"Explore Solutions","href":"/solutions","variant":"primary","icon":"mdi:arrow-right"},{"label":"Contact Us","href":"/contact","variant":"outline","icon":"mdi:phone"}],"className":"bg-transparent"}} />
+      </section>
+      <AboutIndustrial {...{"variant":"industrial","theme":"industrial","title":"Why This System Exists","tabs":[{"id":"problems-facing-companies","label":"Disconnected Tools","content":"Most companies rely on disparate tools without seamless integration, leading to inefficiencies and inconsistencies.","description":"Disconnected tools create silos that impede workflow and communication, making it difficult to leverage AI effectively.","icon":"mdi:connection-off"},{"id":"solutions-delivered","label":"AI-Native Solutions","content":"AI-native companies operate through cohesive systems where decisions are structured and execution is synchronized.","description":"Our solutions ensure that AI is embedded, structured, and scalable within your company's workflow.","icon":"mdi:robot-happy-outline"},{"id":"importance-of-governance","label":"Architecture & Governance","content":"Every solution includes a defined architecture and clear governance, guaranteeing reliable execution at every scale.","description":"Without governance, systems fail, AI causes chaos, and nothing scales. Governance is key to sustained success.","icon":"mdi:home-roof"}],"className":"about-section"}} />
+      <section className="relative overflow-hidden">
+        <CircuitSplash  />
+        <FeaturesGridIndustrial {...{"variant":"grid","title":"Core Offerings","subtitle":"System Architecture × Governance","description":"Our comprehensive services are designed to embed AI into your operations, ensuring every team and process works seamlessly.","theme":"industrial","items":[{"title":"Website System Sprint","description":"Transform your website into a conversion powerhouse with structured data capture and integration.","icon":"mdi:web","link":"/solutions/website-system-sprint"},{"title":"Communication System Foundation","description":"Standardize and unify your company's messaging across AI and human interactions.","icon":"mdi:voice","link":"/solutions/communication-system-foundation"},{"title":"Revenue System Audit","description":"Identify bottlenecks, prioritize opportunities, and outline your roadmap to AI maturity.","icon":"mdi:cash"},{"title":"Agentic Workflow Sprint","description":"Optimize and automate critical workflows to enhance efficiency with AI-backed decisions.","icon":"mdi:robot-vacuum"},{"title":"Global Architecture","description":"Define full system landscapes with scaling architectures and governance models.","icon":"mdi:city"}],"className":"bg-transparent"}} />
+      </section>
+      <section className="relative overflow-hidden">
+        <GridSplash  />
+        <TestimonialsIndustrial {...{"variant":"industrial","title":"Client Testimonials","subtitle":"Success Stories from Industry Leaders","theme":"industrial","testimonials":[{"content":"Innerflect Systems transformed our operational efficiency with seamless AI integration.","author":"Sarah Linden","role":"CTO, Innovatech","avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"},{"content":"The team provided clarity and direction in restructuring our systems for optimal performance.","author":"James O'Connor","role":"CEO, AlphaDynamics","avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=James"},{"content":"Their approach to governance has scaled our AI capabilities more than we imagined.","author":"Sophia Zhang","role":"COO, TechVisionaries","avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Sophia"},{"content":"A remarkable shift in how our teams communicate and execute projects.","author":"Lucas Martin","role":"Head of Projects, FutureWorks","avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Lucas"},{"content":"Their solutions have become the backbone of our digital transformation strategy.","author":"Emily Roberts","role":"CIO, DigitalWave","avatar":"https://api.dicebear.com/7.x/avataaars/svg?seed=Emily"}],"className":"bg-transparent"}} />
+      </section>
+      <PricingIndustrial {...{"variant":"industrial","title":"Our Packages","description":"Choose the package that suits your transformation journey, and integrate structured AI operations.","theme":"industrial","plans":[{"name":"Starter Package","price":"€10K – €18K","description":"Includes Website System Sprint and Communication System Foundation to build foundational systems.","features":[{"label":"Entry-level solutions","icon":"mdi:rocket"},{"label":"Basic AI integration","icon":"mdi:robot-outline"}],"ctaLabel":"Get Started","highlighted":false},{"name":"Growth Package","price":"€10K – €20K","description":"Combine a Revenue System Audit with an Agentic Workflow Sprint to unlock growth potential.","features":[{"label":"Deep dive analysis","icon":"mdi:magnify-scan"},{"label":"Workflow optimization","icon":"mdi:speedometer"}],"ctaLabel":"Start Growing","highlighted":false},{"name":"Transformation Entry","price":"€30K – €90K","description":"Redesign operations with Architecture and Implementation cycles for comprehensive system build.","features":[{"label":"Full system architecture","icon":"mdi:city-variant-outline"},{"label":"Integrated system cycles","icon":"mdi:cached"}],"ctaLabel":"Transform Now","highlighted":true}],"className":"pricing-section"}} />
+    </>
   );
 }
