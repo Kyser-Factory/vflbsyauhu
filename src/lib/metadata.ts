@@ -1,16 +1,16 @@
 
 export const PROJECT_IDENTITY = {
   brandName: "Innerflect Systems",
-  clientName: "innerflect",
-  description: "Innerflect Systems builds and implements transformative operating models that redefine how companies achieve sustained, scalable success through integrated AI-driven systems. Our comprehensive solutions streamline operational processes, ensuring every decision and task aligns with your strategic vision for efficiency and impact.",
-  toneOfVoice: "professional and transformational",
-  assetVibe: "Dark Industrial / Technical",
+  clientName: "Innerflect",
+  description: "Innerflect Systems designs and builds architectures for reliable, scalable execution in organizations embracing AI. We change how work gets done by turning fragmented tools into structured systems.",
+  toneOfVoice: "Technical, Precise, Systematic",
+  assetVibe: "Industrial Minimal / Technical Sales Sheet",
   branding: {
-  "logoIcon": "mdi:robot-industrial",
-  "tagline": "Transformative AI-Driven Solutions for Scalable Success",
-  "variant": "industrial",
-  "showTagline": true
-},
+    "logoIcon": "mdi:robot-industrial",
+    "tagline": "Design. Build. Scale. Systems Over Tools.",
+    "variant": "industrial",
+    "showTagline": true
+  },
   header: {
   "variant": "industrial",
   "logo": "Innerflect Systems",
