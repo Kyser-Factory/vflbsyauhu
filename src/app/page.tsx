@@ -3,7 +3,7 @@
 import ImageSplash from '@/components/splashes/ImageSplash';
 import CircuitSplash from '@/components/splashes/CircuitSplash';
 import GridSplash from '@/components/splashes/GridSplash';
-import HeroIndustrial from '@/components/blocks/HeroIndustrial';
+import HeroOracleGlass from '@/components/blocks/HeroOracleGlass';
 import AboutIndustrial from '@/components/blocks/AboutIndustrial';
 import FeaturesGridIndustrial from '@/components/blocks/FeaturesGridIndustrial';
 import TestimonialsIndustrial from '@/components/blocks/TestimonialsIndustrial';
@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <section className="relative overflow-hidden">
         <ImageSplash src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" />
-        <HeroIndustrial {...{"variant":"minimal","title":"Transforming Execution with AI Systems","subtitle":"We change how work gets done.","description":"Innerflect Systems designs and builds architectures for reliable, scalable execution in organizations embracing AI. Turn fragmented tools and manual processes into structured systems.","theme":"industrial","ctas":[{"label":"Explore Solutions","href":"/solutions","variant":"primary","icon":"mdi:arrow-right"},{"label":"Contact Us","href":"/contact","variant":"outline","icon":"mdi:phone"}],"className":"bg-transparent"}} />
+        <HeroOracleGlass {...{"variant":"oracle","title":"Transforming Execution with AI Systems","subtitle":"We change how work gets done.","description":"Innerflect Systems designs and builds architectures for reliable, scalable execution in organizations embracing AI. Turn fragmented tools and manual processes into structured systems.","theme":"glass","ctas":[{"label":"Explore Solutions","href":"/solutions","variant":"primary","icon":"mdi:arrow-right"},{"label":"Contact Us","href":"/contact","variant":"outline","icon":"mdi:phone"}],"className":"bg-transparent"}} />
       </section>
       <AboutIndustrial {...{"variant":"industrial","theme":"industrial","title":"Why This System Exists","tabs":[{"id":"problems-facing-companies","label":"Disconnected Tools","content":"Most companies rely on disparate tools without seamless integration, leading to inefficiencies and inconsistencies.","description":"Disconnected tools create silos that impede workflow and communication, making it difficult to leverage AI effectively.","icon":"mdi:connection-off"},{"id":"solutions-delivered","label":"AI-Native Solutions","content":"AI-native companies operate through cohesive systems where decisions are structured and execution is synchronized.","description":"Our solutions ensure that AI is embedded, structured, and scalable within your company's workflow.","icon":"mdi:robot-happy-outline"},{"id":"importance-of-governance","label":"Architecture & Governance","content":"Every solution includes a defined architecture and clear governance, guaranteeing reliable execution at every scale.","description":"Without governance, systems fail, AI causes chaos, and nothing scales. Governance is key to sustained success.","icon":"mdi:home-roof"}],"className":"about-section"}} />
       <section className="relative overflow-hidden">
